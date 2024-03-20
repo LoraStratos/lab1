@@ -20,6 +20,6 @@ describe('template spec', () => {
         cy.get(':nth-child(2) > .form-input--password').type('Eujkm1'); // Уголь1
         cy.wait(1000)
         cy.get('.form__buttons > div > .button').click();
-        cy.log('Пароль успешно заменён туда и обратно!')
+        cy.get(':nth-child(2) > .menu-item__item-name').should('exist')
     })
 })

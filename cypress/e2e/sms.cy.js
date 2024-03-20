@@ -11,6 +11,6 @@ describe('template spec', () => {
         cy.wait(1000)
         cy.get('.header-container__desktop > .notification-bell > .notification-bell__icon__desktop > svg').click()
         cy.get('.header-container__desktop > .notification-bell > .notification-bell__similar > .notifications-similar > .notifications-similar__header > .link').click()
-        cy.log('Уведомления открываются и прочитываются!')
+        cy.get('.header-container__desktop > .notification-bell > .notification-bell__similar > .notifications-similar > .notifications-similar__header > .link').should('exist')
     })
 })

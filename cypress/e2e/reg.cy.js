@@ -4,7 +4,7 @@ describe('template spec', () => {
         // Регистрация с позитивными данными
         cy.get('[href="/registration"] > .button').click()
         cy.wait(1000)
-        cy.get(':nth-child(1) > :nth-child(1) > .form-control--medium > .form-input--text').type('TestLogin')
+        cy.get(':nth-child(1) > :nth-child(1) > .form-control--medium > .form-input--text').type('TestLogin2')
         cy.get('.form-input--email').type('TestExample@mail.ru')
         cy.get(':nth-child(3) > .form-control--medium > .form-input--password').type('TestPassword123')
         cy.get(':nth-child(4) > .form-control--medium > .form-input--password').type('TestPassword123')
@@ -15,6 +15,6 @@ describe('template spec', () => {
         cy.get('[style=""] > :nth-child(3) > .form-control--medium > .form-input--text').type('Отчество')
         cy.wait(1000)
         cy.get('.form__buttons > :nth-child(3)').click()
-        cy.log('Всё работает!')
+        cy.get(':nth-child(2) > .menu-item__item-name').should('exist')
     })
 })

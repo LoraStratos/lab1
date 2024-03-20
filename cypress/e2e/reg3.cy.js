@@ -13,6 +13,5 @@ describe('template spec', () => {
         cy.get('[style=""] > :nth-child(1) > .form-control--medium > .form-input--text').type('Фамилия')
         cy.get('[style=""] > :nth-child(1) > .form-control--medium > .form-input--text').clear()
         cy.get('.form-error').should('exist')
-        cy.log('Обязательное поле!')
     })
 })

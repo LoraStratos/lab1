@@ -11,8 +11,6 @@ describe('template spec', () => {
         cy.wait(1000)
         cy.get('.form__buttons > :nth-child(4)').click()
         cy.get(':nth-child(1) > .form-error').should('exist')
-        cy.log('Такой логин уже существует!')
         cy.get(':nth-child(2) > .form-error').should('exist')
-        cy.log('Эта почта уже занята!')
     })
 })
